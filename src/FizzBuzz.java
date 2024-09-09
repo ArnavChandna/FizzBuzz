@@ -13,7 +13,6 @@ class FizzBuzz {
 
             // Print our appropriate result.
             if (divisibleBy3 && divisibleBy5) {
-
                 System.out.println("Fizz Buzz");
 
             } else if (divisibleBy3) {
@@ -29,6 +28,26 @@ class FizzBuzz {
                 System.out.println(i);
 
             }
+        }
+        int i = 1;
+        while (i < 100) {
+            doFizzBuzz(i);
+            i += 1;
+        }
+    }
+
+    private static void doFizzBuzz(int i) {
+        boolean divisible3 = i % 3 == 0;
+        boolean divisible5 = i % 5 == 0;
+
+        if (divisible3 && divisible5) {
+            System.out.println("Fizz Buzz");
+        } else if (divisible3) {
+            System.out.println("Fizz");
+        } else if (divisible5) {
+            System.out.println("Buzz");
+        } else {
+            System.out.println(i);
         }
     }
 }
